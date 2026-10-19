@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>bz_k_v2_scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>bz_k_v2_scraper</h1>
+    <span class="badge">v2.0</span>
+  </div>
+
+  <div class="status" id="status">Ready</div>
+  <div class="stats" id="stats"></div>
+
+  <div class="section actions">
+    <button id="btnScrape" class="btn primary">Scrape Page</button>
+    <button id="btnHighlight" class="btn secondary">Highlight Cards</button>
+    <button id="btnClear" class="btn ghost">Clear</button>
+  </div>
+
+  <div class="section results">
+    <div class="result-line">
+      <span>Contractors found: <strong id="count">0</strong></span>
+    </div>
+    <div class="download-row">
+      <button id="btnDownloadCsv" class="btn" disabled>CSV</button>
+      <button id="btnDownloadJson" class="btn" disabled>JSON</button>
+    </div>
+  </div>
+
+  <div class="preview" id="preview"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "MEXC Quick Trade",
+  "version": "9.9.1",
+  "description": "MEXC futures: activation-price grid bots (long + short at every grid) and one-direction bots (long or short, loop at TP/SL or at a price), Limit/Trigger by rule, alerts.",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mexc.com/*"
+      ],
+      "js": [
+        "recorder.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://*.mexc.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "minimum_chrome_version": "111",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
